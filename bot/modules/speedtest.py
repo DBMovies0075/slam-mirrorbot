@@ -16,25 +16,27 @@ def speedtest(update, context):
     result = test.results.dict()
     string_speed = f'''
     
-<b>=======【Ｓｅｒｖｅｒ】=======</b>
-<b>Name:</b> <code>{result['server']['name']}</code>
+<b>========【Ｓｅｒｖｅｒ】========</b>
 
-<b>Country:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
+<b> ==⫸ 📛 Name:</b> <code>{result['server']['name']}</code>
 
-<b>Sponsor:</b> <code>{result['server']['sponsor']}</code>
+<b> ==⫸ 🏘 Country:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
 
-<b>ISP:</b> <code>{result['client']['isp']}</code>
+<b> ==⫸ 👨‍💼 Sponsor:</b> <code>{result['server']['sponsor']}</code>
+
+<b> ==⫸ 📶 ISP:</b> <code>{result['client']['isp']}</code>
 
 
 
-<b>=====【ＳｐｅｅｄＴｅｓｔ　Ｒｅｓｕｌｔ】=====</b>
-<b>Upload:</b> <code>{speed_convert(result['upload'] / 8)}</code>
+<b>==【ＳｐｅｅｄＴｅｓｔ　Ｒｅｓｕｌｔ】==</b>
 
-<b>Download:</b>  <code>{speed_convert(result['download'] / 8)}</code>
+<b> ==⫸ ⏫ Upload:</b> <code>{speed_convert(result['upload'] / 8)}</code> 🔺
 
-<b>Ping:</b> <code>{result['ping']} ms</code>
+<b> ==⫸ ⏬ Download:</b>  <code>{speed_convert(result['download'] / 8)} 🔻</code>
 
-<b>ISP Rating:</b> <code>{result['client']['isprating']}</code>
+<b> ==⫸ 🔀 Ping:</b> <code>{result['ping']} ms</code>
+
+<b> ==⫸ 📶 ISP Rating:</b> <code>{result['client']['isprating']}</code>
 
 '''
     editMessage(string_speed, speed)
